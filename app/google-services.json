@@ -1,32 +1,13 @@
 {
   "project_info": {
-    "project_number": "507606049733",
-    "project_id": "photos213-e48d4",
-    "storage_bucket": "photos213-e48d4.appspot.com"
+    "project_number": "490585018352",
+    "project_id": "photos4download-7fdb4",
+    "storage_bucket": "photos4download-7fdb4.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:507606049733:android:149abe4f9ea531411521ac",
-        "android_client_info": {
-          "package_name": "com.example.photoupload"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBLH1_t7XD9byPNIWkKUSqH9rSunIObC-o"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:507606049733:android:550e599b82f6adde1521ac",
+        "mobilesdk_app_id": "1:490585018352:android:6793541f0b95b2bbf85735",
         "android_client_info": {
           "package_name": "com.example.wallpaperdownload"
         }
@@ -34,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBLH1_t7XD9byPNIWkKUSqH9rSunIObC-o"
+          "current_key": "AIzaSyCuCkPUW5f0KKpF1JQBiWSzKZbc4qIV7Cc"
         }
       ],
       "services": {

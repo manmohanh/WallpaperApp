@@ -1,6 +1,7 @@
 package com.example.wallpaperdownload
 
 import android.annotation.SuppressLint
+import android.app.WallpaperManager
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -10,6 +11,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -19,15 +21,19 @@ import com.example.wallpaperdownload.adpter.PhotoAdapter
 import com.example.wallpaperdownload.databinding.ActivityMainBinding
 import com.example.wallpaperdownload.model.Photo
 import com.example.wallpaperdownload.model.Status
+import com.example.wallpaperdownload.utils.BottomSheet
 import com.example.wallpaperdownload.viewmodel.PhotoViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.net.URL
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    private lateinit var bottomSheet: BottomSheet
     private lateinit var photoAdapter: PhotoAdapter
     private val photosList:ArrayList<Photo> = arrayListOf()
 
@@ -73,8 +79,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onClicked(photoUri: String){
-        val intent = Intent(this,DetailActivity::class.java)
-        intent.putExtra("uri",photoUri)
-        startActivity(intent)
+        bottomSheet = BottomSheet(photoUri)
+        bottomSheet.show(supportFragmentManager,BottomSheet.TAG)
     }
 }
